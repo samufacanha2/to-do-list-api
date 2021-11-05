@@ -20,7 +20,7 @@ app.use(morgan("dev"));
 app.use(express.json({ limit: 1000000 }));
 app.use(express.urlencoded({ limit: 1000000, extended: true }));
 
-// app.all("*", require("./src/routes/index"));
+app.all("*", require("./src/routes/index"));
 
 app.get("/", (req, res) => {
   res.send("OK");
